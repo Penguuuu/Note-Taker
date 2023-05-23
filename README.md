@@ -8,4 +8,8 @@ This program will let you add your notes and then save your notes. There will be
 - add notes to existing notes
 - remove notes
 
+<<<<<<< HEAD
 # live page and screenshot
+=======
+# live page and screenshot
+>>>>>>> 2c8ce5b898fe2fca0dc12b597d77fc983170ca04

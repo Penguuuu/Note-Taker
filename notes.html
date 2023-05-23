@@ -2,15 +2,18 @@
 <html>
 <head>
   <title>Notes</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>Notes</h1>
-  <div>
-    <div>
+  <div class="container">
+    <div class="notes-container">
       <h2>Existing Notes</h2>
-      <!-- Display existing notes here -->
+      <div id="existing-notes"> <hr>
+        <!-- Display existing notes-->
+      </div>
     </div>
-    <div>
+    <div class="form-container">
       <h2>New Note</h2>
       <input type="text" id="note-title" placeholder="Note Title">
       <textarea id="note-text" placeholder="Note Text"></textarea>
@@ -19,6 +22,5 @@
   </div>
 
   <script src="script.js"></script>
-  <script src="index.js"></script>
 </body>
 </html>

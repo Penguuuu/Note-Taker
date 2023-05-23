@@ -45,7 +45,7 @@ app.post('/api/notes', (req, res) => {
 
   fs.readFile(dbFilePath, 'utf8', (err, data) => {
     if (err) {
-      console.error('Unable to fetch notes:', err);
+      console.error('Error reading notes:', err);
       res.status(500).json({ error: 'Failed to save note' });
     } else {
       try {

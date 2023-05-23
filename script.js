@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
 
-const dbFilePath = path.join(__dirname, '..', 'db.json');
+const dbFilePath = path.join(__dirname, 'db.json');
 
 function readNotesFromFile() {
   return new Promise((resolve, reject) => {
@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const text = textInput.value;
 
     if (title && text) {
-      // will read the exisint notes
       readNotesFromFile()
         .then((notes) => {
           const newNote = {
@@ -53,20 +52,17 @@ document.addEventListener('DOMContentLoaded', () => {
             text,
           };
 
-          // add notes to existing notes
           notes.push(newNote);
 
-          // update note array
           writeNotesToFile(notes)
             .then(() => {
               console.log('Note saved:', newNote);
 
-              // clears
               titleInput.value = '';
               textInput.value = '';
             })
             .catch((error) => {
-              console.error('Unable to saves notes:', error);
+              console.error('Unable to save notes:', error);
             });
         })
         .catch((error) => {

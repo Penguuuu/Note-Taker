@@ -10,3 +10,4 @@ This program will let you add your notes and then save your notes. There will be
 
 # live page and screenshot
 
+https://penguuuu.github.io/Note-Taker/
